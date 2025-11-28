@@ -55,3 +55,4 @@ response = requests.get(url, params=params)
 prediction = response.json()
 
 st.markdown(prediction)
+st.markdown(params)
