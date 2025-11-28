@@ -54,7 +54,7 @@ params = {"pickup_datetime": f"{d} {t}",
 url = "https://taxifare.lewagon.ai/predict"
 
 response = requests.get(url, params=params)
-prediction = response.json()['fare']
+prediction = response.get("fare", "I couldn't find anything")
 
 
 if st.button('fare'):
