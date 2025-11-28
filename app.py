@@ -52,4 +52,6 @@ params = {"day_time": f"{d} {t}",
 url = "https://taxifare.lewagon.ai/predict"
 
 response = requests.get(url, params=params)
-prediction = response.json()['fare']
+prediction = response.json()
+
+st.markdown(prediction)
