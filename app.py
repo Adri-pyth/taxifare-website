@@ -40,6 +40,8 @@ st.write("You selected ", passengers, "passengers")
 
 
 
+
+
 params = {"pickup_datetime": f"{d} {t}",
           "pickup_longitude": pickup_longitude,
           "pickup_latitude": pickup_latitude,
@@ -55,3 +57,9 @@ response = requests.get(url, params=params)
 prediction = response.json()['fare']
 
 
+if st.button('fare'):
+    # print is visible in the server output, not in the page
+    st.write(prediction)
+    st.write('Further clicks are not visible but are executed')
+else:
+    st.write('I was not clicked 😞')
