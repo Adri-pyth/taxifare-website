@@ -1,6 +1,8 @@
 import streamlit as st
 import datetime
 import requests
+import streamlit as st
+import pandas as pd
 '''
 # TaxiFareModel
 '''
@@ -28,6 +30,14 @@ dropoff_longitude = st.number_input('', key="dropoff_longitude", value=-73.98436
 "### Select dropoff latitude"
 dropoff_latitude = st.number_input('', key="dropoff_latitude", value=40.769802)
 "\n"
+
+df = pd.Dataframe({"pickup_longitude": pickup_longitude,
+                   "pickup_latitude": pickup_latitude,
+                   "dropoff_longitude": dropoff_longitude,
+                   "dropoff_latitude": dropoff_latitude})
+
+st.map(df)
+
 "### Select the number of passengers"
 passengers = st.slider("", 0, 10, 10)
 
