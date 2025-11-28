@@ -40,12 +40,12 @@ st.write("You selected ", passengers, "passengers")
 
 
 
-params = {"day_time": f"{d} {t}",
+params = {"pickup_datetime": f"{d} {t}",
           "pickup_longitude": pickup_longitude,
           "pickup_latitude": pickup_latitude,
           "dropoff_longitude": dropoff_longitude,
           "dropoff_latitude": dropoff_latitude,
-          "passengers": passengers}
+          "passenger_count": passengers}
 
 
 
